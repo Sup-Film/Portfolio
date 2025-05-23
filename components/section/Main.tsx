@@ -1,10 +1,65 @@
 import { AnimatedGridPattern } from "../magicui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import { AuroraText } from "../magicui/aurora-text";
+import { ShineBorder } from "../magicui/shine-border";
+import { IconCloud } from "../magicui/icon-cloud";
+import { 
+  CodeIcon, 
+  MonitorIcon, 
+  ServerIcon, 
+  DatabaseIcon,
+  WrenchIcon
+} from "lucide-react"; // ไอคอนสำหรับแต่ละหมวดหมู่ทักษะ
+
+// slugs ที่สอดคล้องกับทักษะทั้งหมด
+const slugs = [
+  // Frontend
+  "html5",
+  "css3",
+  "javascript",
+  "react",
+  "nextdotjs",
+  "bootstrap",
+  "tailwindcss",
+  "flutter",
+  // Backend
+  "nodedotjs",
+  "express",
+  "rubyonrails",
+  "php",
+  "laravel",
+  "go",
+  "python",
+  "ruby",
+  "csharp",
+  "java",
+  // Database
+  "mysql", // สำหรับ SQL
+  "mongodb",
+  "microsoftsqlserver",
+  "postgresql",
+  "firebase",
+  "prisma",
+
+  // Other
+  "typescript",
+  "solidity",
+  "git",
+  "github",
+  "gitlab",
+  "docker",
+  "figma",
+];
 
 const Main = () => {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
+
   return (
     <section className="relative container max-w-7xl bg-zinc-900 mx-auto mt-10 flex flex-col items-center justify-center bg-opacity-80 backdrop-blur-md shadow-lg rounded-lg border border-slate-400 font-main font-bold">
+
+      {/* BackGround GridPattern */}
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.2}
@@ -16,42 +71,136 @@ const Main = () => {
         )}
       />
 
-      <div className="w-full grid grid-cols-1 gap-4 px-5 md:px-10 lg:px-20">
-        <div className="flex flex-col items-start justify-items-start pt-20 pb-10">
-          <h1 className="text-2xl lg:text-5xl text-white font-bold">
-            <AuroraText>About </AuroraText> Me
+      {/* Content */}
+      <div className="w-full grid grid-cols-3 gap-4 px-5 md:px-10 lg:px-20">
+
+        {/* Section: About Me */}
+        <div className="col-span-3 flex flex-col items-start justify-items-start pt-20 pb-10">
+          <h1 className="text-2xl lg:text-5xl text-white font-bold mb-5">
+            <AuroraText colors={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}>
+              About Me
+            </AuroraText>
           </h1>
-          <p className="text-sm md:text-lg text-gray-300 mt-4 max-w-2xl">
-            I am a passionate software developer with a keen interest in web
-            development and open-source projects. I love to explore new
-            technologies and create innovative solutions.
-            <br />
-            <br />I have experience in various programming languages and
-            frameworks, and I am always eager to learn more. In my free time, I
-            enjoy contributing to open-source projects and collaborating with
-            other developers.
-          </p>
+          <div className="relative p-12 rounded-lg bg-zinc-800/70 shadow-lg">
+            <ShineBorder
+              shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+            />
+            <p className="text-sm md:text-lg text-white mt-4 max-w-2xl">
+              Hi, I’m Supakorn — a Computer Engineering graduate from Dhurakij
+              Pundit University with a passion for software development and
+              programming. I enjoy exploring cutting-edge technologies and
+              continuously refining my coding skills to evolve as a developer. I
+              love working on innovative projects where I can contribute
+              technical expertise and creative ideas, and I’m always excited to
+              collaborate with others to build impactful solutions.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col items-start justify-items-start pb-10">
-          <h1 className="text-2xl lg:text-5xl text-white font-bold">
-            My&nbsp;
-            <AuroraText>Projects</AuroraText>
+        {/* End Section: About Me */}
+
+        {/* Cloud Icons */}
+        <div className="col-span-3 md:col-span-1 flex flex-col items-start justify-items-start pb-10">
+          <div className="relative flex items-center justify-items-center size-full">
+            <IconCloud images={images} />
+          </div>
+        </div>
+
+        {/* Section: Skills Section */}
+        <div className="col-span-3 md:col-span-2 flex flex-col items-start justify-items-start pb-10">
+          <h1 className="text-2xl lg:text-5xl text-white font-bold mb-5">
+            <AuroraText colors={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}>
+              Skills
+            </AuroraText>
           </h1>
-          <p className="text-sm md:text-lg text-gray-300 mt-4 max-w-2xl">
-            I have worked on several projects, including web applications,
-            mobile apps, and open-source contributions. Here are a few of my
-            notable projects:
-            <br />
-            <br />
-            - Project 1: A web application that helps users manage their tasks
-            efficiently.
-            <br />
-            - Project 2: An open-source library for data visualization in
-            JavaScript.
-            <br />- Project 3: A mobile app that provides real-time weather
-            updates.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Programming */}
+            <div className="relative p-6 rounded-lg bg-zinc-800/80 shadow-lg">
+              <ShineBorder
+                shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+              />              <h3 className="text-xl text-purple-400 font-bold mb-3 flex items-center gap-2">
+                <CodeIcon className="h-5 w-5" /> Programming
+              </h3>
+              <ul className="list-disc pl-5 text-white space-y-1">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Go</li>
+                <li>Ruby</li>
+              </ul>
+            </div>
+            {/* Frontend */}
+            <div className="relative p-6 rounded-lg bg-zinc-800/80 shadow-lg">
+              <ShineBorder
+                shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+              />
+              <h3 className="text-xl text-blue-400 font-bold mb-3 flex items-center gap-2">
+                <MonitorIcon className="h-5 w-5" /> Frontend
+              </h3>
+              <ul className="list-disc pl-5 text-white space-y-1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Bootstrap 5</li>
+                <li>Tailwind</li>
+                <li>Flutter</li>
+              </ul>
+            </div>
+            {/* Backend */}
+            <div className="relative p-6 rounded-lg bg-zinc-800/80 shadow-lg">
+              <ShineBorder
+                shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+              />
+              <h3 className="text-xl text-green-400 font-bold mb-3 flex items-center gap-2">
+                <ServerIcon className="h-5 w-5" /> Backend
+              </h3>
+              <ul className="list-disc pl-5 text-white space-y-1">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Ruby on Rails</li>
+                <li>PHP</li>
+                <li>Laravel</li>
+              </ul>
+            </div>
+            {/* Database */}
+            <div className="relative p-6 rounded-lg bg-zinc-800/80 shadow-lg">
+              <ShineBorder
+                shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+              />              <h3 className="text-xl text-yellow-400 font-bold mb-3 flex items-center gap-2">
+                <DatabaseIcon className="h-5 w-5" /> Database
+              </h3>
+              <ul className="list-disc pl-5 text-white space-y-1">
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>SQL Server</li>
+                <li>PostgreSQL</li>
+                <li>Firebase</li>
+                <li>Prisma</li>
+              </ul>
+            </div>
+            {/* Other */}
+            <div className="relative p-6 rounded-lg bg-zinc-800/80 shadow-lg">
+              <ShineBorder
+                shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
+              />
+              <h3 className="text-xl text-pink-400 font-bold mb-3 flex items-center gap-2">
+                <WrenchIcon className="h-5 w-5" /> Others
+              </h3>
+              <ul className="list-disc pl-5 text-white space-y-1">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>GitLab</li>
+                <li>Docker</li>
+                <li>Figma</li>
+                <li>Solidity</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        {/* End Section: Skills */}
+
       </div>
     </section>
   );

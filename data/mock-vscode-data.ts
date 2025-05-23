@@ -4,59 +4,45 @@
 export const fileContents: Record<string, string> = {
   "about.md": `# About Me
 ## Supakorn Dongkew
-Full-stack developer passionate about building beautiful and functional web applications
+Hi, I’m Supakorn — a Computer Engineering graduate from Dhurakij Pundit University with a passion for software development and programming.
+I enjoy exploring cutting-edge technologies and continuously refining my coding skills to evolve as a developer.
+I love working on innovative projects where I can contribute technical expertise and creative ideas, and I’m always excited to collaborate with others to build impactful solutions.
 
 ### Technical Skills
-- Frontend: React, Next.js, TypeScript
-- Backend: Node.js, Express
-- Database: MongoDB, PostgreSQL
-- Other: Git, Docker, CI/CD`,
+- Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap 5, Tailwind, Flutter
+- Backend: Node.js, Express.js, Ruby on Rails, PHP, Laravel, Go, Python, Ruby, C#, Java
+- Database: SQL, MongoDB, SQL Server, PostgreSQL, Firebase, Prisma
+- Other: Solidity, Git, GitHub, GitLab, Docker, Figma`,
+  "projects.js": `# My Projects
 
-  "projects.js": `// My Projects
-const projects = [
-  {
-    name: "Portfolio Website",
-    description: "Personal portfolio with interactive terminal and VS Code UI",
-    technologies: ["Next.js", "React", "TailwindCSS"],
-    link: "https://example.com"
-  },
-  {
-    name: "E-commerce Platform",
-    description: "Full-featured online store with payment integration",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    link: "https://example.com/store"
-  },
-  {
-    name: "Task Manager",
-    description: "Collaborative task management application",
-    technologies: ["React", "Express", "PostgreSQL", "Socket.io"],
-    link: "https://example.com/tasks"
-  }
-];
+## Senior Project - WebApplication Flashcard
+
+**Description:**  
+A web application for creating and managing flashcards for studying. It allows users to create, edit, and delete flashcards, as well as organize them into decks. The application also includes a quiz feature that tests users on their knowledge of the flashcards. The webapp uses algorithms to randomize the order of flashcards and provide a spaced repetition learning experience.
+
+**Technologies:**  
+- HTML, CSS, JavaScript
+- Node.js, Express.js
+- MongoDB
 
 export default projects;`,
 
-  "contact.txt": `Email: supakorn@example.com
-GitHub: github.com/supakornd
-LinkedIn: linkedin.com/in/supakornd
-Twitter: @supakornd
+  "contact.txt": `Email: sup.dongkew@gmail.com
+GitHub: https://github.com/Sup-Film
 Location: Thailand`,
+  "skills.json": `# Skills
 
-  "skills.json": `{
-  "frontend": {
-    "languages": ["JavaScript", "TypeScript", "HTML", "CSS"],
-    "frameworks": ["React", "Next.js", "Vue.js"],
-    "libraries": ["Redux", "TailwindCSS", "Styled Components"]
-  },
-  "backend": {
-    "languages": ["Node.js", "Python"],
-    "frameworks": ["Express", "NestJS", "FastAPI"],
-    "databases": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
-  },
-  "devops": {
-    "tools": ["Git", "Docker", "GitHub Actions", "AWS", "Vercel"]
-  }
-}`
+### Frontend
+HTML, CSS, JavaScript, React, Next.js, Bootstrap 5, Tailwind, Flutter
+
+### Backend
+Node.js, Express.js, Ruby on Rails, PHP, Laravel, Go, Python, Ruby, C#, Java
+
+### Database
+SQL, MongoDB, SQL Server, PostgreSQL, Firebase, Prisma
+
+### Other
+TypeScript, Solidity, Git, GitHub, GitLab, Docker, Figma`
 };
 
 export const fileTree = [
