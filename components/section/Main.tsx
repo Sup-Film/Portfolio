@@ -19,7 +19,7 @@ const Main = () => {
       <div className="w-full grid grid-cols-1 gap-4 px-5 md:px-10 lg:px-20">
         <div className="flex flex-col items-start justify-items-start pt-20 pb-10">
           <h1 className="text-2xl lg:text-5xl text-white font-bold">
-            About Me
+            <AuroraText>About </AuroraText> Me
           </h1>
           <p className="text-sm md:text-lg text-gray-300 mt-4 max-w-2xl">
             I am a passionate software developer with a keen interest in web
