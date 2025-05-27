@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { AnimatePresence, motion, useMotionTemplate } from "motion/react";
