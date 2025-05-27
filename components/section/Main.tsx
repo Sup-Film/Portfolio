@@ -13,10 +13,6 @@ import {
 } from "lucide-react"; // ไอคอนสำหรับแต่ละหมวดหมู่ทักษะ
 import {
   motion,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
 } from "motion/react";
 
 // slugs ที่สอดคล้องกับทักษะทั้งหมด

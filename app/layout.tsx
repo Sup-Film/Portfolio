@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DotPattern } from "@/components/magicui/dot-pattern";
-import { Weight } from "lucide-react";
 import Navbar from "@/components/navbar/navbar";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
