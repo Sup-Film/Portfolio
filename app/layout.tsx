@@ -2,6 +2,9 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { Weight } from "lucide-react";
+import Navbar from "@/components/navbar/navbar";
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} antialiased min-h-screen`}>
-        <div className="relative overflow-y-hidden">
-          <DotPattern />
-          {children}
-        </div>
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} antialiased min-h-[100dvh]`}>
+        <Theme className="min-h-screen relative">
+          <div className="fixed inset-0 z-0 h-full w-full">
+            <DotPattern />
+          </div>
+          <Navbar />
+          <div className="relative z-10">{children}</div>
+        </Theme>
       </body>
     </html>
   );
