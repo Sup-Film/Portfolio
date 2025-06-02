@@ -61,7 +61,7 @@ const Main = () => {
   );
 
   return (
-    <section className="relative container max-w-7xl bg-zinc-900 mx-auto mt-10 flex flex-col items-center justify-center bg-opacity-80 backdrop-blur-md shadow-lg rounded-2xl border border-slate-400 font-main font-bold">
+    <section className="relative container max-w-7xl bg-zinc-900 mx-auto mt-10 flex flex-col items-center justify-center bg-opacity-80 backdrop-blur-md shadow-lg rounded-2xl border border-slate-400 font-main font-bold" id="about">
       {/* BackGround GridPattern */}
       <AnimatedGridPattern
         numSquares={30}
@@ -122,7 +122,7 @@ const Main = () => {
         </div>
 
         {/* Section: Skills Section */}
-        <div className="col-span-3 md:col-span-2 flex flex-col items-start justify-items-start pb-10">
+        <div className="col-span-3 md:col-span-2 flex flex-col items-start justify-items-start pb-10" id="skills">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}

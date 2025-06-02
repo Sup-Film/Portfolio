@@ -33,6 +33,7 @@ export const projectsData: Project[] = [
     technologies: ["nextdotjs", "react", "tailwindcss"],
     imageUrl: "/projects/portfolio.png",
     githubUrl: "https://github.com/Sup-Film/portfolio",
+    demoUrl: "https://portfolio-c5hc.onrender.com/",
     category: "Frontend",
     featured: true,
     date: "2024"
