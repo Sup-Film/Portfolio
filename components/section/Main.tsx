@@ -81,7 +81,7 @@ const Main = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-            viewport={{ once: false, amount: "all" }}>
+            viewport={{ amount: 0.5 }}>
             <h1 className="text-2xl lg:text-5xl text-white font-bold mb-5">
               <AuroraText colors={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}>
                 About Me

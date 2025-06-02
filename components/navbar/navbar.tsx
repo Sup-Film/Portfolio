@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const items = [
@@ -8,10 +9,13 @@ const items = [
   { name: "Projects", href: "/projects" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "/" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+
   // Scroll to section
   const scrollToSection = (events: React.MouseEvent<HTMLAnchorElement>) => {
     const targetId = (events.currentTarget as HTMLAnchorElement).getAttribute(
@@ -19,6 +23,11 @@ const Navbar = () => {
     );
     if (targetId && targetId.startsWith("#")) {
       events.preventDefault();
+      if (pathname !== "/") {
+        localStorage.setItem("scrollTarget", targetId);
+        router.push("/");
+      }
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         targetElement.scrollIntoView({
