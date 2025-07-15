@@ -134,120 +134,117 @@ const Main = () => {
             </h1>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Programming */}
+            {/* Programming Languages */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
               viewport={{ once: true, amount: 0.2 }}
               className="relative p-6 bg-zinc-800/80 shadow-lg">
               <div className="rounded-lg">
-                <ShineBorder
-                  shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
-                />{" "}
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
                 <h3 className="text-xl text-purple-400 font-bold mb-3 flex items-center gap-2">
-                  <CodeIcon className="h-5 w-5" /> Programming
+                  <CodeIcon className="h-5 w-5" /> Programming Languages
                 </h3>
                 <ul className="list-disc pl-5 text-white space-y-1">
+                  <li>Go (Golang)</li>
                   <li>JavaScript</li>
-                  <li>TypeScript</li>
-                  <li>Python</li>
-                  <li>Java</li>
-                  <li>C#</li>
-                  <li>Go</li>
+                  <li>Node.js</li>
                   <li>Ruby</li>
                 </ul>
               </div>
             </motion.div>
-            {/* Frontend */}
+            {/* Front-End  */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
               viewport={{ once: true, amount: 0.2 }}
               className="relative p-6 bg-zinc-800/80 shadow-lg">
               <div className="rounded-lg">
-                <ShineBorder
-                  shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
-                />
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
                 <h3 className="text-xl text-blue-400 font-bold mb-3 flex items-center gap-2">
-                  <MonitorIcon className="h-5 w-5" /> Frontend
+                  <MonitorIcon className="h-5 w-5" /> Front-End 
                 </h3>
                 <ul className="list-disc pl-5 text-white space-y-1">
+                  <li>React.js</li>
+                  <li>Next.js</li>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>Bootstrap 5</li>
-                  <li>Tailwind</li>
-                  <li>Flutter</li>
                 </ul>
               </div>
             </motion.div>
-            {/* Backend */}
+            {/* Back-End  */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
               viewport={{ once: true, amount: 0.2 }}
               className="relative p-6 bg-zinc-800/80 shadow-lg">
               <div className="rounded-lg">
-                <ShineBorder
-                  shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
-                />
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
                 <h3 className="text-xl text-green-400 font-bold mb-3 flex items-center gap-2">
-                  <ServerIcon className="h-5 w-5" /> Backend
+                  <ServerIcon className="h-5 w-5" /> Back-End 
                 </h3>
                 <ul className="list-disc pl-5 text-white space-y-1">
-                  <li>Node.js</li>
-                  <li>Express.js</li>
-                  <li>Ruby on Rails</li>
-                  <li>PHP</li>
-                  <li>Laravel</li>
+                  <li>Fiber (Go)</li>
+                  <li>Express.js (Node.js)</li>
+                  <li>Ruby on Rails (Ruby)</li>
                 </ul>
               </div>
             </motion.div>
-            {/* Database */}
+            {/* Databases */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
               viewport={{ once: true, amount: 0.2 }}
               className="relative p-6 bg-zinc-800/80 shadow-lg">
               <div className="rounded-lg">
-                <ShineBorder
-                  shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
-                />{" "}
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
                 <h3 className="text-xl text-yellow-400 font-bold mb-3 flex items-center gap-2">
-                  <DatabaseIcon className="h-5 w-5" /> Database
+                  <DatabaseIcon className="h-5 w-5" /> Databases
                 </h3>
                 <ul className="list-disc pl-5 text-white space-y-1">
-                  <li>SQL</li>
                   <li>MongoDB</li>
-                  <li>SQL Server</li>
                   <li>PostgreSQL</li>
-                  <li>Firebase</li>
-                  <li>Prisma</li>
+                  <li>MySQL</li>
+                  <li>Microsoft SQL Server</li>
                 </ul>
               </div>
             </motion.div>
-
-            {/* Other */}
+            {/* Tools */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
               viewport={{ once: true, amount: 0.2 }}
               className="relative p-6 bg-zinc-800/80 shadow-lg">
               <div className="rounded-lg">
-                <ShineBorder
-                  shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]}
-                />
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
                 <h3 className="text-xl text-pink-400 font-bold mb-3 flex items-center gap-2">
-                  <WrenchIcon className="h-5 w-5" /> Others
+                  <WrenchIcon className="h-5 w-5" /> Tools
                 </h3>
                 <ul className="list-disc pl-5 text-white space-y-1">
                   <li>Git</li>
                   <li>GitHub</li>
-                  <li>GitLab</li>
                   <li>Docker</li>
-                  <li>Figma</li>
-                  <li>Solidity</li>
+                  <li>Postman</li>
+                </ul>
+              </div>
+            </motion.div>
+            {/* Technologies */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="relative p-6 bg-zinc-800/80 shadow-lg">
+              <div className="rounded-lg">
+                <ShineBorder shineColor={["#93c5fd", "#c4b5fd", "#fbcfe8", "#fde68a"]} />
+                <h3 className="text-xl text-pink-400 font-bold mb-3 flex items-center gap-2">
+                  <WrenchIcon className="h-5 w-5" /> Technologies
+                </h3>
+                <ul className="list-disc pl-5 text-white space-y-1">
+                  <li>RESTful APIs</li>
+                  <li>Webhooks</li>
+                  <li>Facebook Graph API</li>
+                  <li>AI Chatbot Development</li>
+                  <li>Prompt Engineering</li>
                 </ul>
               </div>
             </motion.div>

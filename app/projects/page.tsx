@@ -34,22 +34,26 @@ const Projects = () => {
             className="flex justify-items-center items-center">
             <Card className="w-full h-full flex flex-col bg-zinc-700/80 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 hover:bg-zinc-800/60 hover:border-green-500/20 hover:translate-y-[-4px] hover:shadow-xl">
               <CardHeader className="flex-shrink-0">
-                <Lens
-                  zoomFactor={2}
-                  lensSize={150}
-                  isStatic={false}
-                  ariaLabel="Zoom Area">
-                  <Image
-                    className="rounded-lg"
-                    alt={project.title}
-                    src={
-                      "https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    width={500}
-                    height={500}
-                    unoptimized={true}
-                  />
-                </Lens>
+                {project.imageUrl ? (
+                  <Lens
+                    zoomFactor={2}
+                    lensSize={150}
+                    isStatic={false}
+                    ariaLabel="Zoom Area">
+                    <Image
+                      className="rounded-lg"
+                      alt={project.title}
+                      src={project.imageUrl}
+                      width={500}
+                      height={500}
+                      unoptimized={true}
+                    />
+                  </Lens>
+                ) : (
+                  <div className="h-44 md:h-38 bg-gray-300 flex items-center justify-center rounded-lg">
+                    <span className="text-gray-500">No Image Available</span>
+                  </div>
+                )}
               </CardHeader>
               <CardContent className="flex-grow flex flex-col h-44 md:h-38 overflow-hidden">
                 <CardTitle className="text-md md:text-lg font-semibold text-white mb-2">
@@ -62,9 +66,7 @@ const Projects = () => {
               <CardFooter className="flex flex-col gap-4 justify-between items-start">
                 <div className="flex flex-wrap gap-2 items-center justify-items-center">
                   {project.technologies.map((tech) => (
-                    <div
-                      className="bg-zinc-600 p-1 rounded-full"
-                      key={tech}>
+                    <div className="bg-zinc-600 p-1 rounded-full" key={tech}>
                       <Avatar className="flex items-center justify-center">
                         <AvatarImage
                           src={`https://cdn.simpleicons.org/${tech}/${tech}`}

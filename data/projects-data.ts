@@ -19,9 +19,9 @@ export const projectsData: Project[] = [
     title: "WebApplication Flashcard",
     description: "A web application for creating and managing flashcards for studying. Includes features for creating, editing, and organizing cards into decks with a quiz feature that incorporates spaced repetition algorithms.",
     technologies: ["react", "nodedotjs", "express", "mongodb"],
-    imageUrl: "/projects/flashcard-app.png",
-    githubUrl: "https://github.com/Sup-Film/flashcard-app", // เปลี่ยนเป็น URL จริงของคุณ
-    demoUrl: "https://flashcard-app.example.com", // เปลี่ยนเป็น URL จริงถ้ามี หรือลบออกถ้าไม่มี
+    imageUrl: "",
+    githubUrl: "https://github.com/Sup-Film/Senior-Project-Work", // เปลี่ยนเป็น URL จริงของคุณ
+    demoUrl: "", // เปลี่ยนเป็น URL จริงถ้ามี หรือลบออกถ้าไม่มี
     category: "Full Stack", // ประเภทของโปรเจกต์
     featured: true, // โปรเจกต์เด่น
     date: "2023" // ปีที่ทำโปรเจกต์
@@ -29,11 +29,11 @@ export const projectsData: Project[] = [
   {
     id: "portfolio-website",
     title: "Portfolio Website",
-    description: "My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.",
-    technologies: ["nextdotjs", "react", "tailwindcss"],
+    description: "My personal portfolio website built with Next.js and Tailwind CSS, featuring interactive UI elements and animations.",
+    technologies: ["nextdotjs", "react", "tailwindcss", "typescript"],
     imageUrl: "/projects/portfolio.png",
-    githubUrl: "https://github.com/Sup-Film/portfolio",
-    demoUrl: "https://portfolio-c5hc.onrender.com/",
+    githubUrl: "https://github.com/Sup-Film/Portfolio",
+    demoUrl: "",
     category: "Frontend",
     featured: true,
     date: "2024"
